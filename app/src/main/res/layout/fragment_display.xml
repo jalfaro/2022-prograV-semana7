@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.DisplayFragment"
+        android:id="@+id/lyt_container"
+        android:padding="16dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="350px"
+            android:layout_height="350px"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/img_avatar"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_launcher_background"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="#AAAAAA"
+            tools:text="Julio Alfaro"
+            android:id="@+id/txt_nombre"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</layout>

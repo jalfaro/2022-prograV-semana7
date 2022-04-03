@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="gt.edu.galileo.a2022progravsemana7.view.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="gt.edu.galileo.a2022progravsemana7.view.FormFragment"
+        android:label="FormFragment" >
+        <action
+            android:id="@+id/action_formFragment_to_displayFragment"
+            app:destination="@id/displayFragment">
+            <argument
+                android:name="persona"
+                app:argType="gt.edu.galileo.a2022progravsemana7.model.Persona" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="gt.edu.galileo.a2022progravsemana7.view.DisplayFragment"
+        android:label="DisplayFragment" >
+        <argument
+            android:name="persona"
+            app:argType="gt.edu.galileo.a2022progravsemana7.model.Persona" />
+        <action
+            android:id="@+id/action_displayFragment_to_galileoFragment"
+            app:destination="@id/galileoFragment" >
+            <argument
+                android:name="info"
+                app:argType="gt.edu.galileo.a2022progravsemana7.model.Informacion" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="gt.edu.galileo.a2022progravsemana7.view.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galileoFragment"
+        android:name="gt.edu.galileo.a2022progravsemana7.view.GalileoFragment"
+        android:label="GalileoFragment" >
+        <argument
+            android:name="info"
+            app:argType="gt.edu.galileo.a2022progravsemana7.model.Informacion" />
+    </fragment>
+</navigation>
